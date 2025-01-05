@@ -3,7 +3,8 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=0.8, minimum-scale=0.5, maximum-scale=2.0, user-scalable=1">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=0.8, minimum-scale=0.5, maximum-scale=2.0, user-scalable=1">
         <title>倒计时</title>
         <style>
             .shows {
@@ -29,27 +30,24 @@
 
     <body>
         <div id="left_container" class="containers">
-            <h1 id="title">距离迎新舞会还剩：</h1>
-            <p id="timeShow1" class="shows"> </p>
             <h1 id="title">距离托福还剩：</h1>
             <p id="timeShow3" class="shows"> </p>
+                        <h1 id="title">距离春节还剩：</h1>
+                        <p id="timeShow2" class="shows"> </p>
+        </div>
+
+        <div id="right_container" class="containers">
+            <h1 id="title">距离寒假还剩：</h1>
+            <p id="timeShow4" class="shows"> </p>
+
             <h1>当前时间：</h1>
             <p id="timeNow" class="shows"> </p>
         </div>
 
-        <div id="right_container" class="containers">
-            <h1 id="title">距离元旦还剩：</h1>
-            <p id="timeShow2" class="shows"> </p>
-            <h1 id="title">距离寒假还剩：</h1>
-            <p id="timeShow4" class="shows"> </p>
-        </div>
-
         <script>
-            var timeshow1 = document.getElementById("timeShow1");
             var timeshow2 = document.getElementById("timeShow2");
             var timeshow3 = document.getElementById("timeShow3");
             var timeshow4 = document.getElementById("timeShow4");
-
             var timenow = document.getElementById("timeNow");
             function timeDiff(d1) {
                 var dateBegin = new Date();
@@ -63,17 +61,15 @@
                 var leave3 = leave2 % (60 * 1000)
                 var seconds = Math.ceil(leave3 / 1000)
                 //return dayDiff < 0 ? "预定时间已到！" : dayDiff + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
-                return dayDiff < 0 ? "预定时间已到！" : dayDiff + "天 " + hours + "小时";
-
+                return dayDiff < 0 ? "预定时间已到！" : dayDiff + "天 " + hours + "小时 " + minutes + "分钟";
             }
 
             setInterval(function () {
                 time = new Date();
                 timenow.innerHTML = time.toLocaleString();
-                timeshow1.innerHTML = timeDiff("2024-12-29 19:00:00");
-                timeshow2.innerHTML = timeDiff("2025-01-01 00:00:00");
+                timeshow2.innerHTML = timeDiff("2025-01-29 00:00:00");
                 timeshow3.innerHTML = timeDiff("2025-01-11 09:00:00");
-                timeshow4.innerHTML = timeDiff("2025-01-23 10:00:00");
+                timeshow4.innerHTML = timeDiff("2025-01-22 10:00:00");
             }, 100)
         </script>
     </body>
