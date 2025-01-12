@@ -31,15 +31,11 @@
     <body>
         <div id="left_container" class="containers">
             <h1 id="title">距离期末考还剩：</h1>
-            <p id="timeShow3" class="shows"> </p>
-                        <h1 id="title">距离春节还剩：</h1>
-                        <p id="timeShow2" class="shows"> </p>
-        </div>
-
-        <div id="right_container" class="containers">
+            <p id="timeShow2" class="shows"> </p>
             <h1 id="title">距离寒假还剩：</h1>
+            <p id="timeShow3" class="shows"> </p>
+            <h1 id="title">距离春节还剩：</h1>
             <p id="timeShow4" class="shows"> </p>
-
             <h1>当前时间：</h1>
             <p id="timeNow" class="shows"> </p>
         </div>
@@ -67,9 +63,9 @@
             setInterval(function () {
                 time = new Date();
                 timenow.innerHTML = time.toLocaleString();
-                timeshow2.innerHTML = timeDiff("2025-01-29 00:00:00");
-                timeshow3.innerHTML = timeDiff("2025-01-17 08:00:00");
-                timeshow4.innerHTML = timeDiff("2025-01-22 10:00:00");
+                timeshow2.innerHTML = timeDiff("2025-01-17 08:00:00");
+                timeshow3.innerHTML = timeDiff("2025-01-22 10:00:00");
+                timeshow4.innerHTML = timeDiff("2025-01-29 00:00:00");
             }, 100)
         </script>
     </body>
