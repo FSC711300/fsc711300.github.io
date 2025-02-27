@@ -46,7 +46,7 @@
                 var leave3 = leave2 % (60 * 1000)
                 var seconds = Math.ceil(leave3 / 1000)
                 //return dayDiff < 0 ? "预定时间已到！" : dayDiff + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
-                return dayDiff < 0 ? "预定时间已到！" : dayDiff + "天 " + hours + "小时";
+                return dayDiff < 0 ? "预定时间已到！" : dayDiff + "天 " + hours + "小时 " + minutes + "分钟 ";
             }
 
             setInterval(function () {
