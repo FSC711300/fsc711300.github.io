@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=0.8, minimum-scale=0.5, maximum-scale=2.0, user-scalable=1">
+        <title>2025毕业典礼倒计时</title>
+        <style>
+            .shows {
+                width: 500px;
+                height: 60px;
+                font-size: 32px;
+                padding-left: 10px;
+                line-height: 60px;
+            }
+
+            h1 {
+                width: 500px;
+                height: 60px;
+                line-height: 60px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+            <h1 id="title">距离2025毕业典礼还剩：</h1>
+            <p id="timeShow" class="shows"> </p>
+            <h1>当前时间：</h1>
+            <p id="timeNow" class="shows"> </p>
+
+
+        <script>
+            var timeshow = document.getElementById("timeShow");
+            var timenow = document.getElementById("timeNow");
+            function timeDiff(d1) {
+                var dateBegin = new Date();
+                var dateEnd = new Date(d1);
+                var dateDiff = dateEnd.getTime() - dateBegin.getTime();
+                var dayDiff = Math.floor(dateDiff / (24 * 3600 * 1000));
+                var leave1 = dateDiff % (24 * 3600 * 1000);
+                var hours = Math.floor(leave1 / (3600 * 1000));
+                var leave2 = leave1 % (3600 * 1000);
+                var minutes = Math.floor(leave2 / (60 * 1000))
+                var leave3 = leave2 % (60 * 1000)
+                var seconds = Math.ceil(leave3 / 1000)
+                //return dayDiff < 0 ? "预定时间已到！" : dayDiff + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒";
+                return dayDiff < 0 ? "预定时间已到！" : dayDiff + "天 " + hours + "小时";
+            }
+
+            setInterval(function () {
+                time = new Date();
+                timenow.innerHTML = time.toLocaleString();
+                timeshow.innerHTML = timeDiff("2025-05-29 09:00:00");
+            }, 100)
+        </script>
+    </body>
+
+</html>
