@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>生命倒计时</title>
+        <meta charset="UTF-8" />
+        <style>
+            h1{
+                margin-bottom: 60px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>生命倒计时！</h1>
+        <h1>距离五一还有<span id="left_day"> </span>个上学日！</h1>
+        <h1>今天是4月<span id="today"></span>日……</h1>
+        <script>
+            const MAX_DATE_THIS_MONTH = 30;
+            var left_day=document.getElementById("left_day");
+            var today=document.getElementById("today");
+            var date=new Date();
+            var dateNow=date.getDate();
+            var work_day_status=[
+                1,1,1,0,0,0, //4.1~4.6
+                1,1,1,1,1,0,0, //4.7~4.13
+                1,1,1,1,1,0,0, //4.14~4.20
+                1,1,1,1,1,0,1, //4.21~4.27
+                1,1,1                
+            ]
+            var count=0;
+            for(var i=dateNow;i<=MAX_DATE_THIS_MONTH;i++){
+                if(work_day_status[i-1]) count++;
+            }
+            left_day.innerHTML=count;
+            today.innerHTML=dateNow;
+        </script>
+    </body>
+
+</html>
