@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Infomation Display System</title>
+    <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/style/style.css">
+</head>
+<body>
+    <header>
+        <span id="info_disp_title">Information Display System</span>
+        <img src="src/img/ipmc-logo.png" id="logo" />
+    </header>
+    <main>
+            <div id="title_container">
+                <h1 id="main_title">2026 AP&AL夏季音乐会</h1>
+            </div>
+
+            <article id="left">
+                <section id="info_container">
+                    <h1 class="subtitle">彩排时间安排</h1>
+                    <p class="guidance_text">14:00-15:00 灯光调试</p>
+                    <p class="guidance_text">15:00-16:00 音响调试</p>
+                    <p class="guidance_text">16:00-16:30 乐队试音</p>
+                    <p class="guidance_text">16:30-18:30 完整彩排</p>
+                    <p class="guidance_text">18:30-19:00 观众入场</p>
+                    <p class="guidance_text">19:00-21:00 正式表演</p>
+                </section>
+                <section id="time_contianer">
+                    <h1 class="subtitle">当前时间</h1>
+                    <p id="timeNow"> </p>
+                </section>
+        </article>
+
+        <article id="center">
+            <section>
+                <h1 class="subtitle">演员到场指引</h1>
+                <ul>
+                    <li class="guidance_text">演员到场后请前往舞台左边签到，之后可以先行测试节目音频/视频；</li>
+                    <li class="guidance_text">16:00前可以进行一轮彩排，主要进行流程彩排和测试大概效果，不加灯光；</li>
+                    <li class="guidance_text">16:00后不再进行彩排，先进行乐队试音，其它节目演员可利用该时间处理其它事务。</li>
+                </ul>
+            </section>
+        </article>
+
+        <article id="right">
+            <section>
+                <h1 class="subtitle">节目单</h1>
+                <img src="节目单.png" id="program_list" />
+            </section>
+        </article>
+
+        
+
+
+    </main>
+
+    <footer>
+        <p class="footer_text">© 2024 Information Display System. All rights reserved.  By Chauncey Huang & Saul Li.</p>
+    </footer>
+    
+    <script src="src/script/update_time.js"> </script>
+</body>
+</html>
